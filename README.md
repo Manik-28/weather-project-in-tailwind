@@ -15,6 +15,11 @@ The Weather Dashboard project is a simple web application that allows users to s
 - **JavaScript**
 - **OpenWeather API**
 
+- ## How to Use
+1. Enter a city name or use your current location.
+2. View the current weather and 5-day forecast.
+3. Recent searches are saved and can be accessed from the dropdown.
+
 ## Installation
 1. Clone the repository:
    ```bash
