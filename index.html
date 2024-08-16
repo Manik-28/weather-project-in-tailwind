@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Project</title>
+     
+    <!-- Link to external TailwindCSS stylesheet -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-blue-50 font-sans min-h-fit flex flex-col justify-center">
+    <!-- Main header of the weather dashboard -->
+    <h1 class="bg-blue-600 text-white text-3xl py-4 text-center">Weather Dashboard</h1>
+     
+    <!-- Main container for input and weather data -->
+    <div class="container mx-auto flex flex-col lg:flex-row gap-8 p-6">
+         
+        <!-- User input section for city name or current location -->
+        <div class="weather-input lg:w-1/3 space-y-4">
+            <h3 class="text-lg font-semibold">Enter a City Name</h3>
+            <input class="city-input w-full h-12 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="E.g., New York, London, Tokyo">
+            <button class="search-btn w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Search</button>
+             
+            <div class="separator flex items-center justify-center text-gray-500 relative">
+                <span class="absolute bg-blue-50 px-4">or</span>
+                <hr class="w-full border-t border-gray-300">
+            </div>
+            <button class="location-btn w-full bg-gray-600 text-white py-2 rounded hover:bg-gray-700">Use Current Location</button>
+             
+            <!-- Dropdown for recent city searches -->
+            <div class="recent-search-dropdown mt-4">
+                <label for="recent-cities" class="block text-lg font-semibold">Recent Cities</label>
+                <select id="recent-cities" class="w-full h-12 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">No Recent Searches</option>
+                </select>
+            </div>
+        </div>
+         
+        <!-- Section for current weather and 5-day forecast -->
+        <div class="weather-data lg:w-2/3 space-y-8">
+            <!-- Current weather display -->
+            <div class="current-weather bg-blue-600 text-white p-6 rounded flex justify-between items-center">
+                <div class="detail">
+                    <h2 class="text-2xl font-semibold">________ ( ________ )</h2>
+                    <h4 class="text-lg mt-2">Temp: __°C</h4>
+                    <h4 class="text-lg mt-2">Wind: __ M/S</h4>
+                    <h4 class="text-lg mt-2">Humidity: __ %</h4>
+                </div>
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather-icon" class="max-w-[120px]">
+                    <h4 class="capitalize mt-2">________</h4>
+                </div>
+            </div>
+             
+            <!-- 5-day weather forecast cards -->
+            <div class="days-forecast">
+                <h2 class="text-xl font-semibold mb-4">5-Days Forecast</h2>
+                <ul class="weather-cards grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <li class="card bg-gray-600 text-white p-4 rounded space-y-2">
+                        <h3 class="text-lg">( ________ )</h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="img max-w-[70px]">
+                        <h4 class="text-lg mt-2">Temp: __°C</h4>
+                        <h4 class="text-lg mt-2">Wind: __ M/S</h4>
+                        <h4 class="text-lg mt-2">Humidity: __ %</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     
+    <!-- Link to the JavaScript file that handles weather data fetching -->
+    <script src="script.js"></script>
+</body>
+</html>
+ 
